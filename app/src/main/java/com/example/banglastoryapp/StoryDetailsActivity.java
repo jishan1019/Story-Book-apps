@@ -3,6 +3,7 @@ package com.example.banglastoryapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,6 +27,10 @@ public class StoryDetailsActivity extends AppCompatActivity {
         tvQuite = findViewById(R.id.tvQuite);
         tvCount = findViewById(R.id.tvCount);
 
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Story Details");
+        }
 
         quotes = QuoteUtils.getQuotes1();
 
@@ -55,5 +60,15 @@ public class StoryDetailsActivity extends AppCompatActivity {
 
 
 
+    }
+
+    //========= On create end here ====================
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

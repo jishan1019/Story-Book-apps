@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     GridView gridView;
     ArrayList<HashMap<String,String>> arrayList = new ArrayList<>();
     HashMap <String, String> hashMap;
+    Button privacyBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         gridView = findViewById(R.id.gridView);
+        privacyBtn = findViewById(R.id.privacyBtn);
 
         hashMap = new HashMap<>();
         hashMap.put("categoryTitle", "Golpo 1");
@@ -68,6 +71,13 @@ public class MainActivity extends AppCompatActivity {
 
         MyAdaptar myAdaptar = new MyAdaptar();
         gridView.setAdapter(myAdaptar);
+
+        privacyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PrivacyPolicyActivity.class));
+            }
+        });
 
     }
 

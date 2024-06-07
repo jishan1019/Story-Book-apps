@@ -65,7 +65,7 @@
         <!-- Slider-->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             app:cardElevation="5dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
@@ -82,13 +82,27 @@
         </androidx.cardview.widget.CardView>
 
         <!-- Active Books -->
+
+        <Button
+            android:id="@+id/privacyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Privacy Policy"
+            android:background="@drawable/rounded"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+
+            />
+
+
         <GridView
             android:id="@+id/gridView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="10dp"
             android:numColumns="2"
+            android:padding="10dp"
             />
+
 
 
     </LinearLayout>

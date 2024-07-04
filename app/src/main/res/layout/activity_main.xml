@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context="com.einnovation.aryonlineshop.MainActivity"
     android:background="@color/white"
     android:keepScreenOn="true"
     >
@@ -15,57 +15,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-        <!--notice-->
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:orientation="horizontal"-->
-<!--            android:gravity="center | left"-->
-<!--            android:layout_marginTop="3dp"-->
-<!--            android:background="@color/purple_500"-->
-<!--            >-->
-
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textSize="17sp"-->
-<!--                android:paddingLeft="10dp"-->
-<!--                android:paddingRight="10dp"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:gravity="center"-->
-<!--                android:text="নোটিশ"-->
-<!--                android:background="@color/purple_200"-->
-<!--                android:fontFamily="@font/kalpurush"-->
-<!--                android:paddingTop="2dp"-->
-<!--                />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/noticeTitle"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textSize="17sp"-->
-<!--                android:layout_marginLeft="5dp"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:text="মজার মজার গল্প পরুন ১ আপ্পসেই"-->
-<!--                android:fontFamily="@font/kalpurush"-->
-<!--                android:layout_marginTop="2dp"-->
-<!--                android:singleLine="true"-->
-<!--                android:ellipsize="marquee"-->
-<!--                android:marqueeRepeatLimit="marquee_forever"-->
-<!--                android:scrollHorizontally="true"-->
-<!--                android:focusable="true"-->
-<!--                android:focusableInTouchMode="true"-->
-<!--                android:freezesText="true"-->
-<!--                />-->
 
 <!--        </LinearLayout>-->
 
         <!-- Slider-->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             app:cardElevation="5dp"
             android:layout_margin="10dp"
             app:cardCornerRadius="10dp"
@@ -82,7 +38,6 @@
         </androidx.cardview.widget.CardView>
 
         <!-- Active Books -->
-
         <Button
             android:id="@+id/privacyBtn"
             android:layout_width="match_parent"
@@ -94,15 +49,16 @@
 
             />
 
-
         <GridView
             android:id="@+id/gridView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:numColumns="2"
             android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="60dp"
+            android:scrollbars="none"
             />
-
 
 
     </LinearLayout>
@@ -110,12 +66,13 @@
 
     <!-- Ads Container-->
     <LinearLayout
-        android:id="@+id/banLayout"
+        android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         />
+
 
 </RelativeLayout>
